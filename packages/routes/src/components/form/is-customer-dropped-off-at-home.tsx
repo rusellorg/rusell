@@ -4,22 +4,15 @@ import { useFormContext } from 'react-hook-form'
 import { Route } from '../../types'
 
 const IsCustomerDroppedOffAtHome = () => {
-  const {
-    register,
-    formState: {
-      errors: { isCustomerDroppedOffAtHome },
-    },
-  } = useFormContext<Route>()
+  const { register, setValue } = useFormContext<Route>()
 
   return (
     <Checkbox
-      label="Is customer dropped off at home?"
-      helperText={isCustomerDroppedOffAtHome?.message}
-      helperColor="error"
-      fullWidth
-      bordered
       {...register('isCustomerDroppedOffAtHome')}
-    />
+      onChange={e => setValue('isCustomerDroppedOffAtHome', e)}
+    >
+      Is customer dropped off at home?
+    </Checkbox>
   )
 }
 

@@ -13,7 +13,7 @@ const ToField = () => {
 
   return (
     <Input
-      label="Cost"
+      label="To"
       helperText={to?.message}
       helperColor="error"
       fullWidth
