@@ -1,5 +1,3 @@
-const Dummy = () => {
-  return '<div>Dummy</div>'
-}
-
-export default Dummy
+export { default as CompanyForm } from './components/form'
+export * from './service'
+export * from './types'
